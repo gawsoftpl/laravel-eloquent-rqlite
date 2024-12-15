@@ -1,6 +1,6 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite\Connector;
+namespace Gawsoft\LaravelEloquentRqlite\Connector;
 
 use Doctrine\DBAL\Driver\Exception;
 use Doctrine\DBAL\Driver\Result;
@@ -8,7 +8,7 @@ use Doctrine\DBAL\Driver\Statement;
 use Doctrine\DBAL\ParameterType;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Hushulin\LaravelEloquentRqlite\Driver\RqliteStatement;
+use Gawsoft\LaravelEloquentRqlite\Driver\RqliteStatement;
 use PDOException;
 use Psr\Http\Message\ResponseInterface;
 
@@ -52,7 +52,7 @@ final class Connection implements \Doctrine\DBAL\Driver\Connection
      * @param  int  $type
      * @return float|int|string
      */
-    public function quote($value, $type = ParameterType::STRING)
+    function quote(string $value): string
     {
         if (is_int($value) || is_float($value)) {
             return $value;
@@ -98,7 +98,7 @@ final class Connection implements \Doctrine\DBAL\Driver\Connection
         }
     }
 
-    public function beginTransaction()
+    public function beginTransaction(): void
     {
         throw new PDOException('BEGIN invalid for rqlite.');
         //try {
@@ -108,7 +108,7 @@ final class Connection implements \Doctrine\DBAL\Driver\Connection
         //}
     }
 
-    public function commit()
+    public function commit(): void
     {
         throw new PDOException('COMMIT invalid for rqlite.');
         //try {
@@ -118,7 +118,7 @@ final class Connection implements \Doctrine\DBAL\Driver\Connection
         //}
     }
 
-    public function rollBack()
+    public function rollBack(): void
     {
         throw new PDOException('ROLLBACK invalid for rqlite.');
         //try {
@@ -168,5 +168,11 @@ final class Connection implements \Doctrine\DBAL\Driver\Connection
         }
 
         return $result;
+    }
+
+    // todo get vesion rqlite
+    public function getServerVersion(): string
+    {
+        return '1.0';
     }
 }

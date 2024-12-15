@@ -1,9 +1,9 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite;
+namespace Gawsoft\LaravelEloquentRqlite;
 
-use Hushulin\LaravelEloquentRqlite\Commands\LaravelEloquentRqliteCommand;
-use Hushulin\LaravelEloquentRqlite\Driver\RqliteDriver;
+use Gawsoft\LaravelEloquentRqlite\Commands\LaravelEloquentRqliteCommand;
+use Gawsoft\LaravelEloquentRqlite\Driver\RqliteDriver;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Database\SQLiteConnection;
 use Spatie\LaravelPackageTools\Package;

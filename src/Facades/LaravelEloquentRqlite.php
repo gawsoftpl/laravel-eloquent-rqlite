@@ -1,16 +1,16 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite\Facades;
+namespace Gawsoft\LaravelEloquentRqlite\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Hushulin\LaravelEloquentRqlite\LaravelEloquentRqlite
+ * @see \Gawsoft\LaravelEloquentRqlite\LaravelEloquentRqlite
  */
 class LaravelEloquentRqlite extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \Hushulin\LaravelEloquentRqlite\LaravelEloquentRqlite::class;
+        return \Gawsoft\LaravelEloquentRqlite\LaravelEloquentRqlite::class;
     }
 }

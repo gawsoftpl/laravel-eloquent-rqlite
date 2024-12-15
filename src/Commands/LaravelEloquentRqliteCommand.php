@@ -1,6 +1,6 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite\Commands;
+namespace Gawsoft\LaravelEloquentRqlite\Commands;
 
 use Illuminate\Console\Command;
 

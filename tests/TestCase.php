@@ -1,8 +1,8 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite\Tests;
+namespace Gawsoft\LaravelEloquentRqlite\Tests;
 
-use Hushulin\LaravelEloquentRqlite\LaravelEloquentRqliteServiceProvider;
+use Gawsoft\LaravelEloquentRqlite\LaravelEloquentRqliteServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Hushulin\\LaravelEloquentRqlite\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Gawsoft\\LaravelEloquentRqlite\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

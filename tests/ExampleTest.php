@@ -1,6 +1,6 @@
 <?php
 
-use Hushulin\LaravelEloquentRqlite\Tests\EloquentRqlite;
+use Gawsoft\LaravelEloquentRqlite\Tests\EloquentRqlite;
 use Illuminate\Support\Facades\DB;
 
 it('can test', function () {
@@ -35,7 +35,7 @@ it('rqlite transaction', function () {
 it('rqlite model', function () {
     $c = EloquentRqlite::query()->first();
     dump('--------------- rqlite eloquent model first id ------------------', $c->id);
-    expect($c)->toBeInstanceOf('Hushulin\LaravelEloquentRqlite\Tests\EloquentRqlite');
+    expect($c)->toBeInstanceOf('Gawsoft\LaravelEloquentRqlite\Tests\EloquentRqlite');
 });
 
 it('rqlite first', function () {

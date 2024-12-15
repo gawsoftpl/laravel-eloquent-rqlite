@@ -1,10 +1,10 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite\Driver;
+namespace Gawsoft\LaravelEloquentRqlite\Driver;
 
 use Doctrine\DBAL\Driver\AbstractSQLiteDriver;
 use GuzzleHttp\Client;
-use Hushulin\LaravelEloquentRqlite\Connector\Connection;
+use Gawsoft\LaravelEloquentRqlite\Connector\Connection;
 
 class RqliteDriver extends AbstractSQLiteDriver
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite\Driver;
+namespace Gawsoft\LaravelEloquentRqlite\Driver;
 
 use Doctrine\DBAL\Driver\Exception;
 
@@ -24,7 +24,7 @@ class RqliteResult implements \Doctrine\DBAL\Driver\Result
     /**
      * {@inheritDoc}
      */
-    public function fetchNumeric()
+    public function fetchNumeric(): array|false
     {
         $row = $this->fetch();
 
@@ -38,7 +38,7 @@ class RqliteResult implements \Doctrine\DBAL\Driver\Result
     /**
      * {@inheritDoc}
      */
-    public function fetchAssociative()
+    public function fetchAssociative(): array|false
     {
         $row = $this->fetch();
 
@@ -52,7 +52,7 @@ class RqliteResult implements \Doctrine\DBAL\Driver\Result
     /**
      * {@inheritDoc}
      */
-    public function fetchOne()
+    public function fetchOne(): mixed
     {
         $row = $this->fetch();
 

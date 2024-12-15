@@ -1,6 +1,6 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite\Tests;
+namespace Gawsoft\LaravelEloquentRqlite\Tests;
 
 class EloquentRqlite extends \Illuminate\Database\Eloquent\Model
 {

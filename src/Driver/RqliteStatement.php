@@ -1,6 +1,6 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite\Driver;
+namespace Gawsoft\LaravelEloquentRqlite\Driver;
 
 use Doctrine\DBAL\Driver\Result;
 use Doctrine\DBAL\ParameterType;
@@ -35,7 +35,7 @@ class RqliteStatement extends \PDOStatement implements \Doctrine\DBAL\Driver\Sta
     /**
      * {@inheritDoc}
      */
-    public function bindValue($param, $value, $type = ParameterType::STRING)
+    public function bindValue($param, $value, $type = ParameterType::STRING): void
     {
         $this->parameterizedMap[] = $value;
     }
@@ -60,8 +60,11 @@ class RqliteStatement extends \PDOStatement implements \Doctrine\DBAL\Driver\Sta
      *
      * @throws GuzzleException
      */
-    public function fetchAll($how = null, $class_name = null, $ctor_args = null)
-    {
+    public function fetchAll(
+        $mode = PDO::FETCH_DEFAULT,
+        $fetch_argument = null,
+        ...$args
+    ): array {
         $results = $this->requestRqliteByGuzzle();
 
         $results = $results[0];

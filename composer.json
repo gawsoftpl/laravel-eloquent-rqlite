@@ -1,12 +1,12 @@
 {
-    "name": "hushulin/laravel-eloquent-rqlite",
+    "name": "gawsoftpl/laravel-eloquent-rqlite",
     "description": "larevel eloquent for rqlite",
     "keywords": [
-        "hushulin",
+        "gawsoftpl",
         "laravel",
         "laravel-eloquent-rqlite"
     ],
-    "homepage": "https://github.com/hushulin/laravel-eloquent-rqlite",
+    "homepage": "https://github.com/gawsoftpl/laravel-eloquent-rqlite",
     "license": "MIT",
     "authors": [
         {
@@ -16,35 +16,34 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
-        "doctrine/dbal": "^3.1",
-        "guzzlehttp/guzzle": "^7.3",
-        "illuminate/contracts": "^7.0|^8.0|^9.0",
-        "spatie/laravel-package-tools": "^1.12.1",
+        "php": "^8",
+        "doctrine/dbal": "^4.2.1",
+        "guzzlehttp/guzzle": "^7.9.2",
+        "illuminate/contracts": "^7.0|^8.0|^9.0|^10|^11",
+        "spatie/laravel-package-tools": "^1.17.0",
         "ext-json": "*",
-      "ext-pdo": "*"
+        "ext-pdo": "*"
     },
     "require-dev": {
-        "nunomaduro/collision": "^5.0",
-        "nunomaduro/larastan": "^1.0.1",
-        "orchestra/testbench": "^6.0",
-        "pestphp/pest": "^1.21",
-        "pestphp/pest-plugin-laravel": "^1.1",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "phpunit/phpunit": "^9.5",
-        "spatie/laravel-ray": "^1.26"
+        "nunomaduro/collision": "^v8.5.0",
+        "orchestra/testbench": "^v9.7.0",
+        "pestphp/pest": "^v3.7.1",
+        "pestphp/pest-plugin-laravel": "^v3.0.0",
+        "phpstan/extension-installer": "^1.4.3",
+        "phpstan/phpstan-deprecation-rules": "^2.0.1",
+        "phpstan/phpstan-phpunit": "^2.0.1",
+        "phpunit/phpunit": "^11.5.1",
+        "spatie/laravel-ray": "^1.39.0"
     },
     "autoload": {
         "psr-4": {
-            "Hushulin\\LaravelEloquentRqlite\\": "src",
-            "Hushulin\\LaravelEloquentRqlite\\Database\\Factories\\": "database/factories"
+            "Gawsoft\\LaravelEloquentRqlite\\": "src",
+            "Gawsoft\\LaravelEloquentRqlite\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hushulin\\LaravelEloquentRqlite\\Tests\\": "tests"
+            "Gawsoft\\LaravelEloquentRqlite\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,15 +53,19 @@
         "format": "vendor/bin/pint"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Hushulin\\LaravelEloquentRqlite\\LaravelEloquentRqliteServiceProvider"
+                "Gawsoft\\LaravelEloquentRqlite\\LaravelEloquentRqliteServiceProvider"
             ],
             "aliases": {
-                "LaravelEloquentRqlite": "Hushulin\\LaravelEloquentRqlite\\Facades\\LaravelEloquentRqlite"
+                "LaravelEloquentRqlite": "Gawsoft\\LaravelEloquentRqlite\\Facades\\LaravelEloquentRqlite"
             }
         }
     },

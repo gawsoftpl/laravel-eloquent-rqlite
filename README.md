@@ -22,7 +22,7 @@ composer require hushulin/laravel-eloquent-rqlite
 
 lumen framework add below to bootstrap/app.php
 ```php
-$app->register(Hushulin\LaravelEloquentRqlite\LaravelEloquentRqliteServiceProvider::class);
+$app->register(Gawsoft\LaravelEloquentRqlite\LaravelEloquentRqliteServiceProvider::class);
 ```
 
 lumen framework add config to config/database.php
@@ -46,7 +46,7 @@ lumen framework add config to config/database.php
    ]
 ```
 
-You can use eloquent model extend ```\Hushulin\LaravelEloquentRqlite\Model\RqliteModel``` as base model.
+You can use eloquent model extend ```\Gawsoft\LaravelEloquentRqlite\Model\RqliteModel``` as base model.
 
 You can publish and run the migrations with:
 

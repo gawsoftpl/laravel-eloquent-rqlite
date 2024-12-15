@@ -1,6 +1,6 @@
 <?php
 
-namespace Hushulin\LaravelEloquentRqlite\Database\Factories;
+namespace Gawsoft\LaravelEloquentRqlite\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
